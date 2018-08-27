@@ -1,15 +1,17 @@
-class Application 
+class Application
 
   def call(evn)
-    resp = Rack::Response.new 
+    resp = Rack::Response.new
 
-    time = Time.now 
+    time = Time.now
 
     if time.hour > 12
       resp.write "Good Afternoon!"
-    else 
+    else
       resp.write "Good Morning!"
     end
 
     resp.finish
+  end
+  
 end
